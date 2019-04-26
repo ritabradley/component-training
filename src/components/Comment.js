@@ -15,11 +15,6 @@ const Comment = props => {
           <span className='date'>{timePosted}</span>
         </div>
         <div className='text'>{comment}</div>
-        <div className='actions'>
-          <a className='reply' href='/'>
-            Reply
-          </a>
-        </div>
       </div>
     </div>
   );
