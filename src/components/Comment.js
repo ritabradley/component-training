@@ -1,20 +1,20 @@
 import React from 'react';
-import Faker from 'faker';
 
-const Comment = () => {
+const Comment = props => {
+  const { author, avatar, comment, timePosted } = props;
   return (
-    <div className='comment'>
+    <div className='comment three column row'>
       <a href='/' className='avatar'>
-        <img src={Faker.image.avatar()} alt='user avatar' />
+        <img src={avatar} alt='user avatar' />
       </a>
       <div className='content'>
         <a className='author' href='/'>
-          {Faker.name.firstName()}
+          {author}
         </a>
         <div className='metadata'>
-          <span className='date'>Today at 3:34PM</span>
+          <span className='date'>{timePosted}</span>
         </div>
-        <div className='text'>{Faker.lorem.words()}</div>
+        <div className='text'>{comment}</div>
         <div className='actions'>
           <a className='reply' href='/'>
             Reply
